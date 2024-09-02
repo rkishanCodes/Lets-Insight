@@ -1,0 +1,47 @@
+/* src/components/PredictiveAnalysis.module.css */
+
+.predictive-analysis-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.left-panel {
+  width: 30%;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.right-panel {
+  width: 65%;
+  padding: 20px;
+  background-color: #e0e0e0;
+}
+
+.prediction-values {
+  margin-bottom: 20px;
+}
+
+.model-performance {
+  margin-top: 20px;
+}
+
+/* Styles for headings */
+.heading {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Styles for buttons */
+.button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}

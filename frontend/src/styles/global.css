@@ -1,0 +1,70 @@
+/* styles.css */
+
+/* Light theme variables */
+:root {
+  --clr-primary-400: hsl(15, 40%, 98%); /* Body background */
+  --clr-accent-400: hsl(25, 99%, 55%); /* Highlight text */
+  --clr-neutral-100: hsl(160, 2%, 61%); /* Paragraph text */
+  --clr-neutral-700: hsl(22, 5%, 39%); /* Paragraph text */
+  --clr-neutral-800: hsl(240, 3%, 14%); /* Container background */
+  --clr-neutral-900: hsl(0, 0%, 0%); /* General text color */
+
+  --clr-neutral-1000: hsl(0, 0%, 100%);
+
+  --clr-logo-400: hsl(201, 100%, 45%);
+  --clr-logo-900: hsl(202, 71%, 68%);
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+  --clr-primary-400: hsl(240, 3%, 14%); /* Darker body background */
+  --clr-accent-400: hsl(25, 99%, 55%); /* Highdark text (same as dark theme) */
+  --clr-neutral-100: hsl(15, 40%, 98%); /* dark container background */
+  --clr-neutral-700: hsl(15, 40%, 98%); /* dark container background */
+  --clr-neutral-800: hsl(
+    160,
+    2%,
+    61%
+  ); /* Paragraph text (same as dark theme) */
+  --clr-neutral-900: hsl(0, 0%, 100%); /* Light text color */
+
+  --clr-neutral-1000: hsl(0, 0%, 0%);
+
+  --clr-logo-400: hsl(201, 100%, 45%);
+  --clr-logo-900: hsl(215, 88%, 83%);
+}
+
+/* Apply variables */
+body {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-900);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Example of styling headings */
+h1,
+h2,
+h3 {
+  color: var(--primary-color);
+}
+
+/* Example of styling paragraphs */
+p {
+  color: var(--neutral-color);
+  line-height: 1.5;
+}
+
+/* Example of button styling */
+button {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

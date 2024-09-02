@@ -1,0 +1,48 @@
+.nav {
+  max-width: 1050px;
+  margin: 0.825rem auto;
+  display: flex;
+  justify-content: space-between;
+  outline: 1px solid var(--clr-neutral-100);
+  border-bottom: 0.25rem solid #eeeeec;
+
+  border-radius: 0.815rem;
+  align-items: center;
+  background-color: var(--clr-neutral-1000);
+  padding: 0.5rem 1rem;
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
+  /* outline: 2px solid rgb(19, 27, 19); */
+}
+
+.menu {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.menu li {
+  list-style-type: none;
+  color: var(--clr-neutral-700);
+  font-size: var(--fs-500);
+  font-family: var(--ff-secondary);
+  cursor: pointer;
+}
+
+/* .outline > * {
+  outline: 2px solid lime;
+} */
+
+.loginList {
+  list-style-type: none;
+  color: var(--clr-neutral-700);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.loginList li {
+  font-size: var(--fs-500);
+  font-family: var(--ff-secondary);
+}

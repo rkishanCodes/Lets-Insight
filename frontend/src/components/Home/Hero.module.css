@@ -1,0 +1,140 @@
+.heroimg {
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+}
+
+.heroSection {
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  margin: 6rem 0;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.2rem solid var(--clr-neutral-100);
+  border-radius: 40px;
+}
+
+.heading {
+  display: block;
+  color: var(--clr-neutral-900);
+  font-family: var(--ff-primary);
+  font-size: 4rem;
+  font-weight: var(--fw-bold);
+  line-height: 78px;
+  text-align: center;
+}
+
+.heading .blue {
+  color: var(--clr-logo-400);
+}
+
+.desc {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-500);
+  color: var(--clr-neutral-900);
+  line-height: 28px;
+  font-weight: var(--fw-regular);
+  max-width: 60%;
+  text-align: center;
+  margin: 0.725rem 0;
+}
+
+.CTA {
+  border-radius: 40px;
+  width: 200px;
+  background-color: #eeeeec;
+}
+.CTA a {
+  text-decoration: none;
+  font-size: var(--fs-500);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-secondary);
+  color: var(--clr-logo-400);
+}
+
+.free {
+  color: var(--clr-neutral-900);
+  margin-top: 0.525rem;
+  font-size: var(--fs-400);
+  font-family: var(--ff-secondary);
+}
+
+.floatingLeft {
+  position: relative;
+  width: 200px;
+  margin-left: 5rem;
+}
+
+.floatingLeft1,
+.floatingLeft2,
+.floatingLeft3 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+.floatingLeft1,
+.floatingLeft2,
+.floatingLeft3 img {
+  width: 100px;
+  border: 2px solid var(--clr-neutral-100);
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+
+.floatingLeft1 {
+  top: 0;
+}
+
+.floatingLeft2 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.floatingLeft3 {
+  bottom: 0;
+}
+
+.floatingRight1,
+.floatingRight2,
+.floatingRight3 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+.floatingRight1,
+.floatingRight2,
+.floatingRight3 img {
+  width: 100px;
+  border: 2px solid var(--clr-neutral-100);
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+
+.floatingRight {
+  position: relative;
+  width: 200px;
+  margin-right: 5rem;
+}
+
+.floatingRight1 {
+  left: 50%;
+}
+
+.floatingRight2 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.floatingRight3 {
+  bottom: 0;
+  left: 50%;
+}

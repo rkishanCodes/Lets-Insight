@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.admin_login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--clr-primary);
+}
+
+.admin_login form{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: white;
+    width: 500px;
+    height: 300px;
+    border-radius: 1rem;
+    padding: 5rem;
+}
+
+.admin_login form label{
+    font-size: 1.5rem;
+}
+
+.admin_login form input{
+    width: 300px;
+    padding: .5rem;
+    border-radius: .5rem;
+    outline: none;
+}
+
+.admin_login form button{
+    padding: 1rem 2rem;
+    background:coral;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+}
+
+
+.admin-dashboard {
+  padding: 20px;
+}
+
+.admin-dashboard h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.admin-dashboard table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.admin-dashboard th,
+.admin-dashboard td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.admin-dashboard th {
+  background-color: #f4f4f4;
+}
+
+.admin-dashboard button {
+  padding: 5px 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.admin-dashboard button:hover {
+  background-color: darkred;
+}

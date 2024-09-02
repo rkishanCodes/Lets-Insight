@@ -1,0 +1,38 @@
+/* About.module.css */
+.container {
+  display: flex;
+  margin: 2.125rem 0;
+}
+
+.leftColumn {
+  flex: 1;
+  margin: 0 1rem;
+}
+
+.rightColumn {
+  flex: 1; /* Take up all available space in the flex container */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+.rightColumn iframe {
+  max-width: 100%; /* Ensure the iframe doesn't exceed its container */
+}
+
+.fsSecondaryHeading {
+  font-size: var(--fs-800);
+  line-height: 1.2;
+  color: var(--clr-neutral-900);
+  font-weight: var(--fw-bold);
+}
+
+.leftColumn p {
+  color: var(--clr-neutral-900);
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-500);
+  margin: 0.25rem 0.825rem;
+  max-width: 600px;
+  line-height: 2rem;
+  text-align: justify;
+}

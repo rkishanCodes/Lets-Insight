@@ -1,0 +1,89 @@
+/* Login.module.css */
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 400px; /* Adjust as needed */
+  background: var(--clr-primary-400);
+  border: 2px solid var(--clr-neutral-100);
+  border-radius: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Adjust spacing between rows */
+}
+
+.logo {
+  width: 100px; /* Adjust logo size */
+  margin-right: 10px; /* Adjust spacing */
+}
+
+.googleLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #4285f4; /* Google blue color */
+  color: var(--clr-neutral-1000);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: var(--fw-heading);
+  font-size: var(--fs-500);
+  font-weight: var(--fw-regular);
+}
+
+.googleLogin:hover {
+  background-color: #357ae8; /* Darker shade on hover */
+}
+
+.googleIcon {
+  width: 20px; /* Adjust Google icon size */
+  margin-right: 10px; /* Adjust spacing */
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px; /* Adjust form width */
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px; /* Adjust input field spacing */
+  border: 1px solid var(--clr-neutral-100);
+  border-radius: 5px;
+  font-size: var(--fs-500);
+}
+
+.submitButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #4285f4; /* Google blue color */
+  color: var(--clr-neutral-1000);
+  font-family: var(--fw-heading);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-500);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #357ae8; /* Darker shade on hover */
+}

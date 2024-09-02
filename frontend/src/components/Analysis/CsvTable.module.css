@@ -1,0 +1,39 @@
+/* CsvTable.module.css */
+.csv-table-container {
+  margin-top: 20px;
+}
+.csv-table-container h2 {
+  color: var(--clr-neutral-900);
+  font-family: var(--ff-heading);
+  font-size: var(--fs-700);
+}
+
+.csv-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--clr-neutral-100);
+  font-size: var(--fs-500);
+}
+
+.csv-table-container th,
+.csv-table-container td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.csv-table-container th {
+  background-color: #f2f2f2;
+
+  color: var(--clr-neutral-900);
+  font-family: var(--ff-heading);
+  font-size: 1.25rem;
+}
+
+.csv-table-container tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.csv-table-container tbody tr:hover {
+  background-color: #f2f2f2;
+}

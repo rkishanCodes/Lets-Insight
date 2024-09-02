@@ -1,0 +1,116 @@
+.container {
+  --max-width: 1110px;
+  --container-padding: 1em;
+  padding: 0 var(--container-padding);
+  margin-inline: auto;
+}
+
+.evenColumns {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 50em) {
+  .evenColumns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
+.textAlignSmOnly {
+  text-align: center;
+}
+
+.textAlignSmOnly p {
+  color: var(--clr-neutral-900);
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-500);
+  margin: 0 1rem;
+}
+
+.textAlignSmOnly img {
+  border: 2px solid var(--clr-neutral-100);
+  border-radius: 2rem;
+  height: 350px;
+  max-width: 550px;
+  margin: 2rem auto;
+}
+
+@media (min-width: 50em) {
+  .textAlignSmOnly {
+    text-align: left;
+  }
+}
+
+.fsSecondaryHeading {
+  font-size: var(--fs-800);
+  line-height: 1.2;
+  color: var(--clr-neutral-900);
+}
+
+.fwBold {
+  font-weight: var(--fw-bold);
+}
+
+.numberedItems {
+  counter-reset: count;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.numberedItems li {
+  counter-increment: count;
+}
+
+.numberedItems div {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-content: center;
+  column-gap: 0.8125rem;
+  align-items: center;
+  position: relative;
+}
+
+.numberedItems p {
+  grid-column: 1/-1;
+}
+
+.numberedItems div::before {
+  content: "0" counter(count);
+  font-size: var(--fs-500);
+  font-weight: var(--fw-bold);
+  background-color: var(--clr-accent-400);
+  color: var(--clr-neutral-900);
+  border-radius: 100vh;
+  padding: 0 2rem;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+.numberedItemsTitle {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  line-height: 1;
+  font-size: var(--fs-600);
+  font-family: var(--ff-heading);
+}
+
+@media (min-width: 50em) {
+  .numberedItems p {
+    grid-column: 2/-1;
+  }
+}
+
+.flow > :not(:first-child) {
+  margin-top: var(1em, 3em);
+}
+
+.numberedItemsBody {
+  max-width: 41ch;
+  font-family: var(--ff-secondary);
+  font-size: 1.125rem;
+  padding: 1rem 0;
+}

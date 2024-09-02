@@ -1,0 +1,87 @@
+/* DescriptiveAnalysis.module.css */
+
+.DescriptiveAnalysis {
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.Content {
+  display: flex;
+  gap: 20px;
+}
+
+.LeftPanel {
+  flex: 1;
+}
+
+.RightPanel {
+  flex: 3;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Inputs {
+  margin-bottom: 20px;
+}
+
+.Inputs input,
+.Inputs select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.Inputs select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  background-size: 24px;
+  cursor: pointer;
+}
+
+.VisualizationSelector {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ChartContainer {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ChartTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .Content {
+    flex-direction: column;
+  }
+
+  .RightPanel {
+    flex: 1;
+    margin-top: 20px;
+  }
+}
+
+.bd {
+  font-family: var(--fw-secondary);
+  font-size: var(--fs-400);
+  color: black;
+}

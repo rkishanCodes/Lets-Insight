@@ -1,0 +1,24 @@
+:root {
+  /* Define the primary font family */
+  --ff-primary: "Lora", serif;
+  --ff-secondary: "Roboto",Arial;
+  --ff-heading: var(var(--ff-primary));
+  --ff-body: var(var(--ff-secondary));
+
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --fs-300: 0.875rem;
+  --fs-400: 1rem;
+  --fs-500: 1.125rem;
+  --fs-600: 1.5rem;
+  --fs-700: 2.625rem;
+  --fs-800: 3.125rem;
+  --fs-900: 3.75rem;
+
+  --fs-body: var(--fs-400);
+  --fs-primary-heading: var(--fs-900);
+  --fs-secondary-heading: var(--fs-800);
+  --fs-nav: var(--fs-300);
+}
