@@ -2,8 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import session from "express-session";
-import cors from "cors"; // Import cors middleware
- // Import express-session
+import cors from "cors"; 
 
 dotenv.config();
 
