@@ -43,3 +43,9 @@ backend/node_modules/
 backend/.env
 backend/logs/
 backend/coverage/
+
+# macOS specific
+.DS_Store
+
+# Others
+*.DS_StoreIcon?
