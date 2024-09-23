@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import Bar from "../../assets/Bar.svg";
 import Line from "../../assets/line.svg";
-import Area from "../../assets/area.svg";
 import Pie from "../../assets/pie.svg";
 import Radar from "../../assets/radar.svg";
 import Bubble from "../../assets/bubble.svg";
 import Doughnut from "../../assets/doughnut.svg";
 import Ploarbearchart from "../../assets/ploarbearchart.svg";
-import MixedChart from "../../assets/mixedchart.svg";
 
 import styles from "./VisualizationSelector.module.css";
 

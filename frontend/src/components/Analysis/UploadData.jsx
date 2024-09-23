@@ -17,7 +17,7 @@ const UploadData = () => {
       const rows = text.split("\n");
       const headers = rows[0].split(",");
       const data = rows.slice(1).map((row) => row.split(","));
-      dispatch(setCsvDataAndHeaders(data, headers)); // Update context with data and headers
+      dispatch(setCsvDataAndHeaders(data, headers)); 
     };
     reader.readAsText(selectedFile);
   };

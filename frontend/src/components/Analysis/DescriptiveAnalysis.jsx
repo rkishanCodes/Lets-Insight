@@ -14,7 +14,7 @@ import {
 } from "../../redux/slices/descriptiveAnalysisSlice";
 
 const DescriptiveAnalysis = () => {
-  const { csvData, headers } = useContext(CsvContext); // Use context to access CSV data
+  const { csvData, headers } = useContext(CsvContext); 
   const dispatch = useDispatch();
   const { selectedChart, title, xAxis, yAxis, backgroundColor, borderColor } =
     useSelector((state) => state.descriptiveAnalysis);
