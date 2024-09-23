@@ -4,7 +4,7 @@ import ThemeToggle from "../Theme/ThemeToggle";
 import logo from "../../assets/logo2.svg";
 import profile from "../../assets/profile.svg";
 import styles from "./HeaderAnalysis.module.css";
-import { useAuth } from "../../context/AuthContext.jsx"; // Adjust path as needed
+import { useAuth } from "../../context/AuthContext.jsx"; 
 
 const HeaderAnalysis = () => {
   const { isLoggedIn, logout, fetchUserProfile, profileInfo } = useAuth();
