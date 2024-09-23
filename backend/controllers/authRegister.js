@@ -1,4 +1,3 @@
-import mongoose from "mongoose";
 import User from "../models/User.js";
 import userRegistrationSchema from "../config/validationSchema.js";
 import generateToken from "../config/generateToken.js";

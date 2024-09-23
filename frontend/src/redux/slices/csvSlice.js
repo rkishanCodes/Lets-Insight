@@ -18,7 +18,6 @@ export const csvSlice = createSlice({
 
 export const { setCsvData } = csvSlice.actions;
 
-// Async action creator using Redux Thunk
 export const setCsvDataAsync =
   ({ data, headers }) =>
   (dispatch) => {

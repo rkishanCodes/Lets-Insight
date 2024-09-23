@@ -21,17 +21,15 @@ connectDB();
 
 app.use(
   session({
-    secret: process.env.SESSION_SECRET, // Replace with your own secret
+    secret: process.env.SESSION_SECRET, 
     resave: false,
     saveUninitialized: false,
-    // Configure other options as needed
+   
   })
 );
 
-//Routes
 app.use("/api/v0/auth", router);
 
-// admin Route
 app.use("/api/v0/admin", admin_route);
 
 app.get("/", (req, res) => {

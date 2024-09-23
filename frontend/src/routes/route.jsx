@@ -7,9 +7,7 @@ import Login from "../pages/Login.jsx";
 import Analysis from "../pages/Analysis.jsx";
 import DescriptiveAnalysis from "../components/Analysis/DescriptiveAnalysis.jsx";
 import ExploratoryDataAnalysis from "../components/Analysis/ExploratoryDataAnalysis.jsx";
-import PredictiveAnalysis from "../components/Analysis/PredictiveAnalysis.jsx";
 import Data from "../components/Analysis/Data.jsx";
-import ExportCharts from "../components/Analysis/ExportCharts.jsx";
 import Admin_page from "../pages/Admin_page.jsx";
 import Admin_dashboard from "../pages/Admin_dashboard.jsx";
 

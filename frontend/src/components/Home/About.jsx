@@ -1,4 +1,3 @@
-// About.jsx
 import React from "react";
 import styles from "./About.module.css";
 
@@ -23,7 +22,7 @@ const About = () => {
         <iframe
           title="Lottie Animation"
           src="https://lottie.host/embed/6a6084f2-2886-44a6-aafb-48f71346d5d5/YhgnP1YVi4.json"
-          width="450" // Set your desired width here, in pixels or percentage
+          width="450" 
           height="380"
           frameBorder="0"
         ></iframe>

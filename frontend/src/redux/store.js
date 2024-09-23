@@ -8,7 +8,6 @@ const store = configureStore({
   reducer: {
     descriptiveAnalysis: descriptiveAnalysisReducer,
     exploratoryDataAnalysis: exploratoryDataAnalysisReducer,
-
     csv: csvReducer,
   },
 });

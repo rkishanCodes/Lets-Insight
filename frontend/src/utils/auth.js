@@ -12,7 +12,7 @@ export const fetchProfile = async () => {
       const { data } = await axios.get(
         "http://localhost:5002/api/v0/auth/profile",
         config
-      ); // Adjust API endpoint as needed
+      ); 
       return data;
     } catch (error) {
       console.log("Error fetching profile info:", error);

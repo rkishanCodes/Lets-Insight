@@ -1,7 +1,7 @@
 :root {
-  --clr-dark-primary-400: #222224; /* Darker body background */
-  --clr-dark-accent-400: #fe791c; /* Highdark text (same as dark theme) */
-  --clr-dark-neutral-100: #fcf9f8; /* dark container background */
-  --clr-dark-neutral-800: #9a9d9c; /* Paragraph text (same as dark theme) */
-  --clr-dark-neutral-900: #ecf0f1; /* Light text color */
+  --clr-dark-primary-400: #222224; 
+  --clr-dark-accent-400: #fe791c; 
+  --clr-dark-neutral-100: #fcf9f8; 
+  --clr-dark-neutral-800: #9a9d9c; 
+  --clr-dark-neutral-900: #ecf0f1; 
 }

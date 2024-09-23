@@ -31,10 +31,6 @@
   cursor: pointer;
 }
 
-/* .outline > * {
-  outline: 2px solid lime;
-} */
-
 .loginList {
   list-style-type: none;
   color: var(--clr-neutral-700);
@@ -45,4 +41,9 @@
 .loginList li {
   font-size: var(--fs-500);
   font-family: var(--ff-secondary);
+}
+
+.login {
+  text-decoration: none;
+  color: var(--clr-neutral-700);
 }

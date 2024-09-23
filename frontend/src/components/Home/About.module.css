@@ -1,4 +1,3 @@
-/* About.module.css */
 .container {
   display: flex;
   margin: 2.125rem 0;
@@ -10,14 +9,14 @@
 }
 
 .rightColumn {
-  flex: 1; /* Take up all available space in the flex container */
+  flex: 1;
   display: flex;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
+  justify-content: center;
+  align-items: center;
 }
 
 .rightColumn iframe {
-  max-width: 100%; /* Ensure the iframe doesn't exceed its container */
+  max-width: 100%;
 }
 
 .fsSecondaryHeading {

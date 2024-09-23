@@ -4,7 +4,6 @@ import { CsvContext } from "../../context/CsvContext";
 const CsvToObjectConverter = () => {
   const { csvData, headers } = useContext(CsvContext);
 
-  // Function to convert csvData and headers to objects
   const convertCsvToObject = () => {
     if (!csvData || !headers || csvData.length === 0 || headers.length === 0) {
       return [];

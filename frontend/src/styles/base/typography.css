@@ -1,5 +1,4 @@
 :root {
-  /* Define the primary font family */
   --ff-primary: "Lora", serif;
   --ff-secondary: "Roboto",Arial;
   --ff-heading: var(var(--ff-primary));

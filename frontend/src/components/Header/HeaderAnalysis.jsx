@@ -16,11 +16,9 @@ const HeaderAnalysis = () => {
     fetchUserProfile();
   }, []);
 
-  // Fetch URL parameters
   const { section } = useParams();
 
   useEffect(() => {
-    // Set active section based on URL parameter
     if (section) {
       setActiveItem(section);
     }

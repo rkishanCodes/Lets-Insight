@@ -1,9 +1,9 @@
 :root {
-  --clr-light-primary-400: hsl(15, 40%, 98%); /* Body background */
+  --clr-light-primary-400: hsl(15, 40%, 98%);
 
-  --clr-light-accent-400: hsl(25, 99%, 55%); /* Highlight text */
-  --clr-light-neutral-100: hsl(160, 2%, 61%); /* Paragraph text */
-  --clr-light-neutral-800: hsl(240, 3%, 14%); /* Container background */
-  
-  --clr-light-neutral-900: hsl(0, 0%, 0%); /* General text color */
+  --clr-light-accent-400: hsl(25, 99%, 55%);
+  --clr-light-neutral-100: hsl(160, 2%, 61%);
+  --clr-light-neutral-800: hsl(240, 3%, 14%);
+
+  --clr-light-neutral-900: hsl(0, 0%, 0%);
 }

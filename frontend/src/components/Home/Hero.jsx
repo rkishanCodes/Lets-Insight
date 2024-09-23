@@ -1,6 +1,10 @@
 import React, { useEffect, useRef } from "react";
-import styles from "./Hero.module.css";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
+
+import styles from "./Hero.module.css";
 
 import floatingLeft1 from "../../assets/floatingLeft1.svg";
 import floatingLeft2 from "../../assets/floatingLeft2.svg";
@@ -9,41 +13,44 @@ import floatingRight1 from "../../assets/floatingRight1.svg";
 import floatingRight2 from "../../assets/floatingRight2.svg";
 import floatingRight3 from "../../assets/floatingRight3.svg";
 
-
-import { useAuth } from "../../context/AuthContext";
-
+gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
   const floatingLeftRef = useRef(null);
   const floatingRightRef = useRef(null);
-
-  const { profileInfo } = useAuth(); 
-  console.log(profileInfo);
+  const { profileInfo } = useAuth();
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
+    const floatingLeft = floatingLeftRef.current;
+    const floatingRight = floatingRightRef.current;
 
-      const scrollFactor = 0.2;
+    gsap.to(floatingLeft, {
+      x: (index, target) => -target.offsetWidth * 0.7,
+      ease: "none",
+      scrollTrigger: {
+        trigger: floatingLeft,
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
 
-      const floatingLeft = floatingLeftRef.current;
-      if (floatingLeft) {
-        const newXLeft = -scrollTop * scrollFactor;
-        floatingLeft.style.left = `${newXLeft}px`;
-      }
+    gsap.to(floatingRight, {
+      x: (index, target) => target.offsetWidth * 0.7,
+      ease: "none",
+      scrollTrigger: {
+        trigger: floatingRight,
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
 
-      const floatingRight = floatingRightRef.current;
-      if (floatingRight) {
-        const newXRight = scrollTop * scrollFactor;
-        floatingRight.style.right = `${-newXRight}px`;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
+
   return (
     <div className={styles.heroSection} id="Hero">
       <div className={styles.floatingLeft} ref={floatingLeftRef}>

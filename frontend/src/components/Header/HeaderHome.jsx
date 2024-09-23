@@ -1,11 +1,10 @@
-// HeaderHome.jsx
 
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ThemeToggle from "../Theme/ThemeToggle";
 import logo from "../../assets/logo2.svg";
 import styles from "./HeaderHome.module.css";
-import { useAuth } from "../../context/AuthContext.jsx"; // Adjust path as needed
+import { useAuth } from "../../context/AuthContext.jsx"; 
 
 const HeaderHome = () => {
   const { isLoggedIn, logout } = useAuth();
@@ -17,9 +16,7 @@ const HeaderHome = () => {
     }
   };
 
-  useEffect(() => {
-    // Optional: Fetch user profile or perform any other initialization
-  }, []);
+
 
   return (
     <nav className={`${styles.nav} ${styles.outline}`}>
@@ -35,7 +32,7 @@ const HeaderHome = () => {
         {isLoggedIn ? (
           <li onClick={logout}>Logout</li>
         ) : (
-          <Link to="/login">
+          <Link to="/login" className={styles.login}>
             <li>Login</li>
           </Link>
         )}

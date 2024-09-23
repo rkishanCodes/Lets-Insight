@@ -1,6 +1,5 @@
 import React from "react";
 import UploadData from "./UploadData.jsx";
-import CsvTable from "./CsvTable.jsx";
 
 const Data = () => {
   return (

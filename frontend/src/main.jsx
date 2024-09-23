@@ -1,11 +1,11 @@
 import React from "react";
-import { createRoot } from "react-dom/client"; // Updated import for React 18
+import { createRoot } from "react-dom/client"; 
 import { Provider } from "react-redux";
 import store from "./redux/store.js";
 import App from "./App";
 
 const container = document.getElementById("root");
-const root = createRoot(container); // Create root using the new API
+const root = createRoot(container); 
 
 root.render(
   <React.StrictMode>

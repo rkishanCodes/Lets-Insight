@@ -1,6 +1,6 @@
 import express from "express";
 import passport from "../config/passport.js";
-import User from "../models/User.js";
+import User from "../models/User.js"
 import registerUser from "../controllers/authRegister.js";
 import loginUser from "../controllers/authLogin.js";
 import authGetUserProfile from "../controllers/authGetUserProfile.js";
@@ -46,33 +46,6 @@ router.get("/google/callback/login", (req, res, next) => {
   )(req, res, next);
 });
 
-// // Callback route for Google registration
-// router.get("/google/callback/register", (req, res, next) => {
-//   passport.authenticate(
-//     "google-register",
-//     { failureRedirect: "http://localhost:5173/register" },
-//     (err, user, info) => {
-//       if (err || !user) {
-//         console.log(user);
-//         return res.redirect("http://localhost:5173/register");
-//       }
-
-//       if (user && info && info.message === "User already registered") {
-//         // User is already registered with this Google account
-//         return res.redirect("http://localhost:5173/register?exists=true");
-//       }
-
-//       // Successful registration scenario
-//       req.login(user, (err) => {
-//         if (err) {
-//           return next(err);
-//         }
-//         const token = generateToken(user._id);
-//         res.redirect(`http://localhost:5173/login?token=${token}`);
-//       });
-//     }
-//   )(req, res, next);
-// });
 
 router.get("/google/callback/register", (req, res, next) => {
   passport.authenticate(
@@ -94,11 +67,11 @@ router.get("/google/callback/register", (req, res, next) => {
       }
 
       if (!user) {
-        // Handle case where user is not authenticated
+        //  user is not authenticated
         return res.redirect("http://localhost:5173/register");
       }
 
-      // Successful registration scenario
+      // Successful registration 
       req.login(user, (err) => {
         if (err) {
           console.error("Error during login:", err);

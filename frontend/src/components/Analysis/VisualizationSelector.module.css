@@ -1,6 +1,3 @@
-
-
-
 .ChartsContainer {
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -12,7 +9,7 @@
 }
 
 .ChartsContainer img {
-  width: 30px; /* Adjust as needed */
+  width: 30px; 
 }
 
 

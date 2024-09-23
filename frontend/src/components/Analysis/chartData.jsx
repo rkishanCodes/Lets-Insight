@@ -1,15 +1,4 @@
-import React from "react";
-import {
-  Bar,
-  Line,
-  Area,
-  Pie,
-  Scatter,
-  Radar,
-  RadialBar,
-  Funnel,
-  Composed,
-} from "react-chartjs-2";
+
 import bar from "../../assets/Bar.svg";
 import line from "../../assets/Line.svg";
 import area from "../../assets/Area.svg";
