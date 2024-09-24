@@ -1,6 +1,5 @@
 import express from "express";
 import passport from "../config/passport.js";
-import User from "../models/User.js"
 import registerUser from "../controllers/authRegister.js";
 import loginUser from "../controllers/authLogin.js";
 import authGetUserProfile from "../controllers/authGetUserProfile.js";
@@ -33,7 +32,7 @@ router.get("/google/callback/login", (req, res, next) => {
     { failureRedirect: "http://localhost:5173/login" },
     (err, user, info) => {
       if (err || !user) {
-        return res.redirect("http://localhost:5173/login");
+        return res.redirect("http://localhost:5173/login?exists=false");
       }
       req.login(user, (err) => {
         if (err) {
@@ -46,23 +45,19 @@ router.get("/google/callback/login", (req, res, next) => {
   )(req, res, next);
 });
 
-
 router.get("/google/callback/register", (req, res, next) => {
   passport.authenticate(
     "google-register",
     { failureRedirect: "http://localhost:5173/register" },
     (err, user, info) => {
       if (err) {
-        console.error("Error during Google registration:", err);
+        // console.error("Error during Google registration:", err);
         return res.redirect("http://localhost:5173/register");
       }
 
-      console.log("User:", user);
-      console.log("Info:", info);
-
       if (info && info.message === "User already registered") {
         // User is already registered with this Google account
-        console.log("check is executeing");
+        // console.log("check is executeing");
         return res.redirect("http://localhost:5173/register?exists=true");
       }
 
@@ -71,10 +66,10 @@ router.get("/google/callback/register", (req, res, next) => {
         return res.redirect("http://localhost:5173/register");
       }
 
-      // Successful registration 
+      // Successful registration
       req.login(user, (err) => {
         if (err) {
-          console.error("Error during login:", err);
+          // console.error("Error during login:", err);
           return next(err);
         }
         const token = generateToken(user._id);

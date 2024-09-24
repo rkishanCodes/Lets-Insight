@@ -14,19 +14,34 @@ const Login = () => {
   const [notification, setNotification] = useState("");
   const [error, setError] = useState("");
 
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (token) {
+      navigate("/analysis/data");
+    }
+  }, [navigate]);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Check if both email and password fields are filled
+    if (!formData.email || !formData.password) {
+      setError("Both fields are required.");
+      return; // Stop further execution if fields are empty
+    }
+
     try {
       const response = await axios.post(
         `${import.meta.env.VITE_API_BASE_URL}/api/v0/auth/login`,
         formData
       );
       localStorage.setItem("token", response.data.token);
-      navigate("/analysis");
+      navigate("/analysis/data");
     } catch (error) {
       setError(error.response.data.message);
     }
@@ -43,9 +58,10 @@ const Login = () => {
     const token = params.get("token");
     const exists = params.get("exists");
 
+
     if (token) {
       localStorage.setItem("token", token);
-      navigate("/analysis");
+      navigate("/analysis/data");
     }
 
     if (exists === "false") {

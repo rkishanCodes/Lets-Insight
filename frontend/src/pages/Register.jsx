@@ -1,18 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Register.module.css";
 import logo from "../assets/logo2.svg";
 import googleIcon from "../assets/google.svg";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Register = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: "",
   });
   const [error, setError] = useState("");
+
+  // Parse URL parameters to check if 'exists=true'
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    if (params.get("exists") === "true") {
+      setError("User already registered");
+    }
+  }, [location]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -31,9 +40,8 @@ const Register = () => {
         formData
       );
       localStorage.setItem("token", response.data.token);
-      navigate("/analysis");
+      navigate("/analysis/data");
     } catch (error) {
-      console.error("Register error:", error);
       setError("Registration failed");
     }
   };
@@ -66,7 +74,7 @@ const Register = () => {
               onChange={handleChange}
             />
             <input
-              type="text"
+              type="email"
               placeholder="Email"
               className={styles.input}
               name="email"

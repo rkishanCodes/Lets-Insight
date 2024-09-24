@@ -78,7 +78,7 @@ admin_route.delete("/:id", async (req,res) => {
     console.log("Error", err);
     res.status(500).send("Error deleting users");
   }
-})
+}) 
 
 
 export default admin_route;
